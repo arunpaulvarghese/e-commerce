@@ -7,18 +7,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: buildAppBar(context),
       body: Body(),
     );
   }
 
-  AppBar buildAppBar() {
+  AppBar buildAppBar(context) {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
       leading: IconButton(
-        icon: SvgPicture.asset("images/back.svg"),
-        onPressed: () {},
+        icon: Icon(
+          Icons.arrow_back_ios_rounded,
+          color: Colors.black,
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
       actions: <Widget>[
         IconButton(

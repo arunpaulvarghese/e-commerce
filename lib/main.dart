@@ -1,8 +1,7 @@
 // import 'package:app_intro_food_delivery/pages/intro_page.dart';
-import 'package:e_commerce/pages/top_nav.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/onboarding.dart';
+import 'pages/onboarding/onboarding.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,10 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: OnBoard(),
     );
   }
 }
